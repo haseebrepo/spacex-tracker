@@ -1,0 +1,45 @@
+# Python bytecode and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+*.egg-info/
+
+# SQLite DB & cache files
+*.db
+cache/
+
+# Env files
+.env
+.env.*
+
+# Pytest cache and test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# VSCode & JetBrains IDEs
+.vscode/
+.idea/
+
+# Docker files
+*.log
+*.pid
+
+# Virtualenv
+venv/
+ENV/
+env/
+.spacex_venv/
+
+# Formatting and linting
+.mypy_cache/
+.dmypy.json
+black.log
+isort.log
+
+# Misc
+*.swp
+.DS_Store
+Thumbs.db

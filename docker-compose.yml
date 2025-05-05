@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    container_name: spacex_tracker
+    command: uvicorn webapp.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  test:
+    build: .
+    container_name: spacex_tracker_test
+    volumes:
+      - .:/app
+    entrypoint: ["pytest", "-v", "--tb=short", "tests"]
